@@ -1,0 +1,102 @@
+.welcome__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  gap: 3.125rem; //50px
+}
+
+.spotify-logotype {
+  font-weight: 800;
+font-size: 27px;
+text-align: center;
+}
+
+.header--title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+.buttons-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem; // 18px
+  width: 100%;
+}
+
+.register-form--separator  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem; //24px
+  background: transparent;
+  color: #BBBBBB;
+  height: 19px;
+}
+
+.separate-line {
+  background: #BBBBBB;
+  width: 140px;
+  height: 1px;
+}
+
+input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.share-checkbox-group {
+  display: flex;
+  gap: 1.125rem //18px;
+}
+
+.additional-form-information {
+  font-size: 0.813rem; //13px
+  text-align: center;
+  overflow-wrap: break-word;
+  line-height: 15.6px;
+  span {
+    text-decoration: underline;
+    color: #65D36E;
+  }
+}
+
+.first-information {
+  inline-size: 278px;
+
+  @media (min-width: 576px) {
+    inline-size: 100%;
+  }
+}
+
+.second-information {
+  inline-size: 308px;
+
+  @media (min-width: 576px) {
+    inline-size: 100%;
+  }
+}
+
+.center-self {
+  align-self: center;
+}
+
+.sign-email__span {
+  font-size: 1.125rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.login-question {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+
+  span {
+    text-decoration: underline;
+    color: #65D36E;
+  }
+}

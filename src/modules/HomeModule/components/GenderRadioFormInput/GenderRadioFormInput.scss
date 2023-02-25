@@ -1,0 +1,51 @@
+.form-group--radio {
+  font-size: 0.875rem; // 14 px
+  font-weight: 400;
+}
+
+.label-group--radio {
+  padding-bottom: 1rem;
+  font-weight: 700;
+}
+
+.radio__inputs {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.125rem 1.5rem; // 18px 24px
+  
+  width: 100%;
+
+  input[type=radio] {
+    display: none;
+  }
+  
+  /* Style the custom radio input */
+  label:before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    margin-right: 18px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  /* Change the color of the custom radio input when it is active */
+  input[type="radio"]:checked + label:before {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border: 5px solid #65D36E;
+    border-radius: 40px;
+  }
+
+  @media (min-width: 576px) {
+    min-width: 406px;
+    gap: 1.125rem; //18px
+  }
+
+}

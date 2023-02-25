@@ -1,0 +1,21 @@
+.global-layout {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  min-width: 280px;
+  margin: 3.125rem 0; //50px
+}
+
+.global__content--center {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 0 1rem;
+
+  @media (min-width: 576px) {
+    max-width: 442px;
+    padding: 0;
+  }
+}
+
