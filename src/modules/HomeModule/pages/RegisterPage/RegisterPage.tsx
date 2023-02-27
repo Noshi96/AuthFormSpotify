@@ -1,17 +1,14 @@
-import { LayoutGlobalComponent } from '@/global-components/LayoutGlobalComponent/LayoutGlobalComponent';
 import React from 'react';
-import { RegisterForm, LoginForm } from '../../components';
+
 import './RegisterPage.scss';
+import { LayoutGlobalComponent } from '@global-components';
+import { LoginForm, RegisterForm } from '@home-module-components';
 
-interface IRegisterPageProps {
-  msg: string;
-}
-
-export const RegisterPage: React.FC<IRegisterPageProps> = () => {
+export const RegisterPage: React.FC = () => {
   return (
     <LayoutGlobalComponent>
-      {/* <RegisterForm /> */}
-      <LoginForm />
+      <RegisterForm />
+      {/* <LoginForm /> */}
     </LayoutGlobalComponent>
   );
 };

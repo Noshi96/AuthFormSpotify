@@ -31,7 +31,7 @@ export const Button: React.FC<IDefaultButtonProps> = ({
   if (buttonType === 'apple') {
     return (
       <button className='default__button apple__button'>
-        <img src={appleIcon} alt='Google icon' />
+        <img src={appleIcon} alt='Apple icon' />
         <span>{children}</span>
       </button>
     );

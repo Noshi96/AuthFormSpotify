@@ -1,64 +1,113 @@
 .default__button {
+  --logo-width: 25px;
+  --logo-height: 25px;
+  --facebook-logo-width: 27px;
+  --facebook-logo-height: 27px;
+  --spaces-between-buttons: 1.25rem; // 20px
+  --button-height: 57px;
+  --buttons-standard-font-size: 1rem;
+  --small-button-width: 173px;
+  --bold-font-weight: 700;
+  --normal-font-weight: 400;
+  --apple-background: #191919;
+  --apple-stroke-on-hover: #000000;
+  --apple-background-on-active: #8B8B8B;
+  --facebook-background-on-hover: #3C4F7D;
+  --facebook-background-on-active: #9DA6BD;
+  --border-on-hover: #000000;
+  --facebook-background: #445A90;
+  --default-button-background: #ffffff;
+  --default-button-font-color: #848484;
+  --black-button-font-color: #000000;
+  --default-button-border-color: #292929;
+  --standard-button-font-color: #ffffff;
+  --submit-background: var(--color-spotify-standard);
+  --submit-background-on-active: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #65D36E;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.25rem; // 20px
-  height: 57px;
-  font-size: 1rem;
+  gap: var(--spaces-between-buttons);
+  height: var(--button-height);
+  font-size: var(--buttons-standard-font-size);
+  font-weight: var(--bold-font-weight);
   border-radius: 50px;
-  background: #ffffff;
-  border: 1px solid #000000;
+  background: var(--default-button-background);
+  border: 1px solid var(--default-button-border-color);
   width: 100%;
+  color: var(--default-button-font-color);
+  cursor: pointer;
+
+  &.facebook__button {
+    background: var(--facebook-background);
+    color: var(--standard-button-font-color);
+    border: 1px var(--facebook-background);
+
+    &:hover {
+      background: var(--facebook-background-on-hover);
+    }
+    &:active {
+      background: var(--facebook-background-on-active);
+    }
+  }
+
+  &.submit__button {
+    align-self: center;
+    width: var(--small-button-width);
+    border: 1px solid var(--submit-background);
+    background: var(--submit-background);
+    color: var(--black-button-font-color);
+
+    &:active {
+      background: var(--submit-background-on-active);
+    }
+  }
+
+  &.apple__button {
+    border: 1px var(--apple-background);
+    background: var(--apple-background);
+    color: var(--standard-button-font-color);
+    
+    &:hover {
+      background: var(--apple-stroke-on-hover);
+    }
+    &:active {
+      background: var(--apple-background-on-active);
+    }
+  }
+
+  &.google__button {
+    color: var(--black-button-font-color);
+
+    &:active {
+      border: 1px solid var(--default-button-border-color);
+    }
+  }
+
+  .fa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--facebook-logo-width);
+    height: var(--facebook-logo-height);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  .fa-facebook {
+    background: #ffffff;
+    color: var(--facebook-background);
+  }
+
+  img {
+    width: var(--logo-width);
+    height: var(--logo-height);
+  }
 
   @media (min-width: 576px) {
     width: 100%;
   }
-
-  cursor: pointer;
 }
 
-.facebook__button {
-  background: #445A90;
-  color: #ffffff;
-  border: 1px transparent;
-}
 
-.apple__button {
-  background: #000000;
-  color: #ffffff;
-  border: 1px #000000;
-}
-
-.fa {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  width: 27px;
-  height: 27px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-.fa-facebook {
-  background: #ffffff;
-  color: #3B5998;
-}
-
-.google__button, .apple__button {
-  img {
-    width: 25px;
-    height: 25px;
-  }
-}
-
-.submit__button {
-  align-self: center;
-  width: 173px;
-  background: #65D36E;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #000000;
-  border: 1px solid #65D36E;
-}

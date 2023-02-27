@@ -1,6 +1,6 @@
-import { Button } from '@/global-components/Button/Button';
 import React from 'react';
-import { DefaultFormInput } from '../DefaultFormInput/DefaultFormInput';
+import { Button } from '@global-components';
+import { DefaultFormInput } from '@home-module-components';
 import './LoginForm.scss';
 
 export const LoginForm: React.FC = () => {
@@ -15,7 +15,6 @@ export const LoginForm: React.FC = () => {
           <Button buttonType='facebook'>{`Sign up with Facebook`}</Button>
         </div>
       </header>
-
       <div className='register-form--separator'>
         <div className='separate-line' />
         <span>or</span>

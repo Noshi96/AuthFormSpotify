@@ -3,7 +3,7 @@ import { RegisterPage } from '@modules';
 
 const App: React.FC = () => (
   <main>
-    <RegisterPage msg='INVO Academy Starter with React + TypeScript' />
+    <RegisterPage />
   </main>
 );
 

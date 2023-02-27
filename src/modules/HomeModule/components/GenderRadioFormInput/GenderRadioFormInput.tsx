@@ -10,54 +10,70 @@ export const GenderRadioFormInput: React.FC = () => {
         </label>
       </div>
       <div className='radio__inputs'>
-        <input
-          type='radio'
-          name='gender'
-          value='Male'
-          id='male'
-          //checked={topping === "Regular"}
-          //onChange={onOptionChange}
-        />
-        <label htmlFor='male'>Male</label>
+        <label className='container' htmlFor='male'>
+          <span className='input-text'>Male</span>
+          <input
+            type='radio'
+            name='gender'
+            value='Male'
+            id='male'
+            //checked={topping === "Regular"}
+            //onChange={onOptionChange}
+          />
+          <span className='check-mark'></span>
+        </label>
 
-        <input
-          type='radio'
-          name='gender'
-          value='Female'
-          id='female'
-          //checked={topping === "Medium"}
-          //onChange={onOptionChange}
-        />
-        <label htmlFor='female'>Female</label>
+        <label className='container' htmlFor='female'>
+          <span className='input-text'>Female</span>
+          <input
+            type='radio'
+            name='gender'
+            value='Female'
+            id='female'
+            //checked={topping === "Medium"}
+            //onChange={onOptionChange}
+          />
+          <span className='check-mark'></span>
+        </label>
 
-        <input
-          type='radio'
-          name='gender'
-          value='Non-binary'
-          id='non-binary'
-          //checked={topping === "Large"}
-          //onChange={onOptionChange}
-        />
-        <label htmlFor='non-binary'>Non-binary</label>
+        <label className='container' htmlFor='non-binary'>
+          <span className='input-text'>Non-binary</span>
+          <input
+            type='radio'
+            name='gender'
+            value='Non-binary'
+            id='non-binary'
+            //checked={topping === "Large"}
+            //onChange={onOptionChange}
+          />
+          <span className='check-mark'></span>
+        </label>
 
-        <input
-          type='radio'
-          name='gender'
-          value='Other'
-          id='other'
-          //checked={topping === "Large"}
-          //onChange={onOptionChange}
-        />
-        <label htmlFor='other'>Other</label>
-        <input
-          type='radio'
-          name='gender'
-          value='Prefer not to say'
-          id='not-say'
-          //checked={topping === "Large"}
-          //onChange={onOptionChange}
-        />
-        <label htmlFor='not-say'>Prefer not to say</label>
+        <label className='container' htmlFor='other'>
+          <span className='input-text'>Other</span>
+          <input
+            type='radio'
+            name='gender'
+            value='Other'
+            id='other'
+            //checked={topping === "Large"}
+            //onChange={onOptionChange}
+          />
+          <span className='check-mark'></span>
+        </label>
+
+        <label className='container' htmlFor='not-say'>
+          <span className='input-text'>Prefer not to say</span>
+          <input
+            type='radio'
+            name='gender'
+            value='Prefer not to say'
+            id='not-say'
+            //checked={topping === "Large"}
+            //onChange={onOptionChange}
+          />
+          <span className='check-mark'></span>
+        </label>
       </div>
     </div>
   );

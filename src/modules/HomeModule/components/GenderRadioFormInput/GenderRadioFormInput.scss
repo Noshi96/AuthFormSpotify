@@ -1,51 +1,88 @@
 .form-group--radio {
-  font-size: 0.875rem; // 14 px
-  font-weight: 400;
-}
+  --default-form-group-vertical-spacing: 1rem;
+  --radio-input-horizontal-spacing: 1.5rem; // 24px
+  --radio-input-vertical-spacing: 1.125rem; // 18px
+  --radio-input-left-shift: 2.375rem; //38px
+  --radio-input-mark-width: 20px;
+  --radio-input-mark-height: 20px;
+  --radio-container-height: 20px;
+  --input-check-style-width: 10px;
+  --input-check-style-height: 10px;
 
-.label-group--radio {
-  padding-bottom: 1rem;
-  font-weight: 700;
-}
 
-.radio__inputs {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.125rem 1.5rem; // 18px 24px
-  
-  width: 100%;
+  font-size: var(--default-input-font-size);
+  font-weight: var(--small-font-weight);
 
-  input[type=radio] {
-    display: none;
+  .label-group--radio {
+    padding-bottom: var(--default-form-group-vertical-spacing);
+    font-weight: var(--bold-font-weight);
   }
-  
-  /* Style the custom radio input */
-  label:before {
-    content: "";
-    display: inline-block;
-    position: relative;
-    top: 6px;
-    margin-right: 18px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    background-color: #fff;
-  }
-  
-  /* Change the color of the custom radio input when it is active */
-  input[type="radio"]:checked + label:before {
-    background-color: #ffffff;
+
+  .radio__inputs {
     box-sizing: border-box;
-    border: 5px solid #65D36E;
-    border-radius: 40px;
-  }
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--radio-input-vertical-spacing) var(--radio-input-horizontal-spacing);
+    width: 100%;
 
-  @media (min-width: 576px) {
-    min-width: 406px;
-    gap: 1.125rem; //18px
-  }
+  .container {
+    position: relative;
+    padding-left: var(--radio-input-left-shift);
+    user-select: none;
+    height: var(--radio-container-height);
+    cursor: pointer;
 
+    input {
+      position: absolute;
+      opacity: 0;
+      display: none;
+    }
+
+    .input-text {
+      position: relative;
+      top: 15%;
+    }
+
+    .check-mark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: var(--radio-input-mark-height);
+      width: var(--radio-input-mark-width);
+      background: transparent;
+      border-radius: 50%;
+      border: 1px solid var(--color-secondary-dark);
+
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+
+    &:hover input ~ .check-mark {
+      border: 1px solid var(--color-spotify-standard);
+    }
+
+    input:checked ~ .check-mark {
+      background: var(--color-spotify-standard);
+      border: 1px solid var(--color-spotify-standard);
+      
+      &:after {
+        display: block;
+      }
+    }
+
+    .check-mark:after {
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      width: var( --input-check-style-width);
+      height: var( --input-check-style-height);
+      border-radius: 50%;
+      background: var(--color-white-standard);
+    }
+  }
+  }
 }

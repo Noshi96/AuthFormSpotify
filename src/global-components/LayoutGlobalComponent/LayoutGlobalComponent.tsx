@@ -9,6 +9,6 @@ export const LayoutGlobalComponent: React.FC<ILayoutGlobalComponentProps> = ({
   children,
 }) => (
   <div className='global-layout'>
-    <div className='global__content--center'>{children}</div>
+    <div className='global-layout__content'>{children}</div>
   </div>
 );

@@ -1,8 +1,10 @@
-import { Button } from '@/global-components/Button/Button';
 import React from 'react';
-import { BirthDateFormInput } from '../BirthDateFormInput/BirthDateFormInput';
-import { DefaultFormInput } from '../DefaultFormInput/DefaultFormInput';
-import { GenderRadioFormInput } from '../GenderRadioFormInput/GenderRadioFormInput';
+import { Button } from '@global-components';
+import {
+  GenderRadioFormInput,
+  DefaultFormInput,
+  BirthDateFormInput,
+} from '@home-module-components';
 import './RegisterForm.scss';
 
 export const RegisterForm: React.FC = () => {
