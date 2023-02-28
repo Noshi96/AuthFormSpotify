@@ -7,18 +7,19 @@ export const LoginForm: React.FC = () => {
   return (
     <>
       <header className='welcome__header'>
-        <span className='spotify-logotype'>{`Spotify`}</span>
-        <span className='header-login--title'>{`Please sign in to Spotify to continue.`}</span>
-        <div className='buttons-area'>
+        <span className='welcome__header-spotify-logotype'>{`Spotify`}</span>
+        <span className='welcome__header-login--title'>{`Please sign in to Spotify to continue.`}</span>
+        <div className='welcome__header-buttons-area'>
           <Button buttonType='google'>{`Sign up with Google`}</Button>
           <Button buttonType='apple'>{`Sign up with Apple`}</Button>
           <Button buttonType='facebook'>{`Sign up with Facebook`}</Button>
         </div>
       </header>
-      <div className='register-form--separator'>
-        <div className='separate-line' />
+
+      <div className='form-separator'>
+        <div className='form-separator-line' />
         <span>or</span>
-        <div className='separate-line' />
+        <div className='form-separator-line' />
       </div>
       <DefaultFormInput
         id='emailLogin'
@@ -48,7 +49,7 @@ export const LoginForm: React.FC = () => {
       </div>
       <div className='login-separator__line' />
       <div className='no-account-group'>
-        <span className='no-account__title'>{`You don't have an account yet?`}</span>
+        <span className='no-account-group__title'>{`You don't have an account yet?`}</span>
         <Button buttonType='default'>{'Sign up for spotify'}</Button>
       </div>
     </>

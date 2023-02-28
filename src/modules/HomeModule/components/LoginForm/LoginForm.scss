@@ -1,33 +1,33 @@
-.header-login--title {
-  font-weight: 700;
-}
-
-.remember-checkbox-group-login {
-  display: flex;
-  align-items: center;
-  gap: 1.125rem; //18px;
-  font-weight: 400;
-  font-size: 0.875rem; // 14px
-}
-
 .sign-in-group {
+  --checkbox-text-spacing: 1.125rem; //18px;
+
   display: flex;
   justify-content: space-between;
+
+  .remember-checkbox-group-login {
+    display: flex;
+    align-items: center;
+    gap: var(--checkbox-text-spacing);
+    font-weight: var(--small-font-weight);
+    font-size: var(--default-input-font-size);
+  }
 }
 
 .login-separator__line {
   height: 1px;
-  background: #BBBBBB;
+  background: var(--color-gray-standard);
 }
 
 .no-account-group {
+  --sign-up-button-spacing: 1.5rem; // 24px
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem; // 24px
-}
+  gap: var(--sign-up-button-spacing);
 
-.no-account__title {
-  font-weight: 700;
-  font-size: 1.125rem; // 18px
+  & &__title{
+    font-weight: var(--bold-font-weight);
+    font-size: var(--regular-plus-font-zie);
+  }
 }

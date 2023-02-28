@@ -11,18 +11,18 @@ export const RegisterForm: React.FC = () => {
   return (
     <>
       <header className='welcome__header'>
-        <span className='spotify-logotype'>{`Spotify`}</span>
-        <span className='header--title'>{`Sign up for free to start listening`}</span>
-        <div className='buttons-area'>
+        <span className='welcome__header-spotify-logotype'>{`Spotify`}</span>
+        <span className='welcome__header-title'>{`Sign up for free to start listening`}</span>
+        <div className='welcome__header-buttons-area'>
           <Button buttonType='google'>{`Sign up with Google`}</Button>
           <Button buttonType='facebook'>{`Sign up with Facebook`}</Button>
         </div>
       </header>
 
-      <div className='register-form--separator'>
-        <div className='separate-line' />
+      <div className='form-separator'>
+        <div className='form-separator-line' />
         <span>or</span>
-        <div className='separate-line' />
+        <div className='form-separator-line' />
       </div>
       <span className='sign-email__span'>{`Sign up with your email address`}</span>
       <DefaultFormInput
