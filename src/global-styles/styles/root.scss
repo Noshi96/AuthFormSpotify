@@ -53,3 +53,24 @@
       width: 100%;
     }
   }
+
+  .form-separator {
+    --form-separator-horizontal-spacing: 1.5rem; // 24px
+    --line-width: 140px;
+    --line-height: 1px;
+    --form-separator-height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--form-separator-horizontal-spacing);
+    background: transparent;
+    color: var(--color-gray-standard);
+    height: var(--form-separator-height);
+  
+    & &-line {
+      background: var(--color-gray-standard);
+      width: var(--line-width);
+      height: var(--line-height);
+    }
+  }
