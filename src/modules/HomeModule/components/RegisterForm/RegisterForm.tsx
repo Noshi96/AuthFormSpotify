@@ -61,14 +61,23 @@ export const RegisterForm: React.FC = () => {
       <BirthDateFormInput />
       <GenderRadioFormInput />
       <div className='share-checkbox-group'>
-        <input type='checkbox' id='share' name='share' />
-        <label htmlFor='share'>
+        <label className='container' htmlFor='share-checkbox'>
           <span>
             {`Share my registration date with Spotify's content providers for
             marketing purposes.`}
           </span>
+          <input
+            type='checkbox'
+            name='share'
+            value='share'
+            id='share-checkbox'
+            //checked={topping === "Large"}
+            //onChange={onOptionChange}
+          />
+          <span className='checkmark'></span>
         </label>
       </div>
+
       <div className='additional-form-information first-information center-self'>
         {`By clicking on sing-up. you agree to Sporify's `}
         <span>{`Terms and Conditions of Use.`}</span>

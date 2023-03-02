@@ -26,63 +26,63 @@
     gap: var(--radio-input-vertical-spacing) var(--radio-input-horizontal-spacing);
     width: 100%;
 
-  .container {
-    position: relative;
-    padding-left: var(--radio-input-left-shift);
-    user-select: none;
-    height: var(--radio-container-height);
-    cursor: pointer;
-
-    input {
-      position: absolute;
-      opacity: 0;
-      display: none;
-    }
-
-    .input-text {
+    .container {
       position: relative;
-      top: 15%;
-    }
+      padding-left: var(--radio-input-left-shift);
+      user-select: none;
+      height: var(--radio-container-height);
+      cursor: pointer;
 
-    .check-mark {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: var(--radio-input-mark-height);
-      width: var(--radio-input-mark-width);
-      background: transparent;
-      border-radius: 50%;
-      border: 1px solid var(--color-secondary-dark);
-
-      &:after {
-        content: "";
+      input {
         position: absolute;
+        opacity: 0;
         display: none;
       }
-    }
 
-    &:hover input ~ .check-mark {
-      border: 1px solid var(--color-spotify-standard);
-    }
+      .input-text {
+        position: relative;
+        top: 15%;
+      }
 
-    input:checked ~ .check-mark {
-      background: var(--color-spotify-standard);
-      border: 1px solid var(--color-spotify-standard);
-      
-      &:after {
-        display: block;
+      .check-mark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: var(--radio-input-mark-height);
+        width: var(--radio-input-mark-width);
+        background: transparent;
+        border-radius: 50%;
+        border: 1px solid var(--color-secondary-dark);
+
+        &:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+      }
+
+      &:hover input ~ .check-mark {
+        border: 1px solid var(--color-spotify-standard);
+      }
+
+      input:checked ~ .check-mark {
+        background: var(--color-spotify-standard);
+        border: 1px solid var(--color-spotify-standard);
+        
+        &:after {
+          display: block;
+        }
+      }
+
+      .check-mark:after {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: var( --input-check-style-width);
+        height: var( --input-check-style-height);
+        border-radius: 50%;
+        background: var(--color-white-standard);
       }
     }
-
-    .check-mark:after {
-      top: 50%;
-      right: 50%;
-      transform: translate(50%, -50%);
-      width: var( --input-check-style-width);
-      height: var( --input-check-style-height);
-      border-radius: 50%;
-      background: var(--color-white-standard);
-    }
-  }
   }
 }

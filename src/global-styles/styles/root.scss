@@ -9,12 +9,16 @@
     --color-spotify-standard: #65D36E;
     --color-white-standard: #ffffff;
     --color-gray-standard: #bbbbbb;
+    --default-small-font-size: 0.813rem; //13px
     --default-input-font-size: 0.875rem; // 14 px
-    --regular-plus-font-zie: 1.125rem; // 18 px
+    --regular-small-font-size: 0.875rem;  // 14px
+    --regular-font-size: 1rem;
+    --regular-plus-font-size: 1.125rem; // 18 px
     --big-font-size: 1.688rem;// 27px
     --big-plus-font-size: 2.25rem; // 36px
     --bold-plus-font-weight: 800;
     --bold-font-weight: 700;
+    --regular-plus-font-weight: 600;
     --regular-font-weight: 500;
     --small-font-weight: 400;
 }
@@ -74,3 +78,4 @@
       height: var(--line-height);
     }
   }
+  
