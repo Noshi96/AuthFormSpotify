@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './FormDropdown.scss';
+import arrowIcon from '../../../../assets/images/down-arrow.svg';
 
 const monthNames = [
-  { value: '', label: 'Select a month' },
   { value: '01', label: 'January' },
   { value: '02', label: 'February' },
   { value: '03', label: 'March' },
@@ -19,20 +19,37 @@ const monthNames = [
 
 export const FormDropdown: React.FC = () => {
   const [selectedMonth, setSelectedMonth] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedMonth(event.target.value);
+  const handleLiChange = (value: string) => {
+    setIsOpen((prev) => !prev);
+    setSelectedMonth(value);
   };
+
+  const OptionList = () => (
+    <ul className='drop-down__list'>
+      {monthNames.map(({ label }) => (
+        <li
+          onClick={() => handleLiChange(label)}
+          className='Element'
+          key={label}
+        >
+          {label}
+        </li>
+      ))}
+    </ul>
+  );
 
   return (
     <div className='custom-select'>
-      <select value={selectedMonth} onChange={handleChange}>
-        {monthNames.map((month) => (
-          <option key={month.value} value={month.value}>
-            {month.label}
-          </option>
-        ))}
-      </select>
+      <button
+        onClick={() => setIsOpen((prev) => !prev)}
+        className='select-month__button'
+      >
+        {selectedMonth ? selectedMonth : 'Month'}
+        <img src={arrowIcon} alt='drop down icon' />
+      </button>
+      {isOpen ? <OptionList /> : null}
     </div>
   );
 };

@@ -1,67 +1,64 @@
 .birth-date__label {
-  font-size: 0.875rem; // 14px
-  font-weight: 700;
-  padding-bottom: 1rem;
+  --birth-date-label-padding-bottom: 1rem;
+
+  font-size: var(--regular-small-font-size);
+  font-weight: var(--bold-font-weight);
+  padding-bottom: var(--birth-date-label-padding-bottom);
 }
 
 .date-group {
+  --date-input-horizontal-spacing: 0.75rem; // 12px
+  --label-group-padding-bottom: 0.625rem; // 10px
+  --month-form-group-min-width: 135px;
+  --month-form-group-width: 189px;
+  --day-form-group-width: 110px;
+  --year-form-group-width: 119px;
+  --input-height: 56px;
+  --input-radius: 50px;
+  --input-padding-left-mobile: 1.5rem;
+  --input-padding-left-desktop: 2rem;
+
+
   display: flex;
   justify-content: space-between;
-  gap: 0.75rem; // 12px
+  gap: var(--date-input-horizontal-spacing);
   max-width: 100%;
 }
 
-.form-group {
-  font-size: 0.875rem; // 14px
-  font-weight: 700;
-}
-
 .label-group {
-  padding-bottom: 0.625rem; // 10px
+  padding-bottom: var(--label-group-padding-bottom);
 }
 
 .month-form-group {
-  min-width: 135px;
+  min-width: var(--month-form-group-min-width);
   @media (min-width: 576px) {
-    width: 189px;
+    width: var(--month-form-group-width);
   }
 }
 
 .day-form-group {
   max-width: 100%;
   @media (min-width: 576px) {
-    width: 110px;
+    width: var(--day-form-group-width);
   }
 }
 
 .year-form-group {
   max-width: 100%;
   @media (min-width: 576px) {
-    width: 119px;
+    width: var(--year-form-group-width);
   }
 }
 
-.month__input, .day__input, .year__input {
+.day__input, .year__input {
   width: 100%;
-  height: 56px;
+  height: var(--input-height);
   border: 1px solid var(--color-secondary-dark);
-  border-radius: 50px;
-  font-size: 0.875rem;
-  padding-left: 1.5rem; //24px
+  border-radius: var(--input-radius);
+  font-size: var(--default-input-font-size);
+  padding-left: var(--input-padding-left-mobile);
 
   @media (min-width: 576px) {
-    padding-left: 2rem; //32px
+    padding-left: var(--input-padding-left-desktop); //32px
   }
-}
-
-select option {
-  background-color: #f8f8f8;
-  color: #333;
-  font-weight: bold;
-  border-radius: 50px;
-}
-
-select option:hover {
-  background-color: #ccc;
-  color: #fff;
 }
