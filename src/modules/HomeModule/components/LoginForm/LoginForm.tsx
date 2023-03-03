@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@global-components';
-import { DefaultFormInput } from '@home-module-components';
+import { DefaultFormInput, CheckboxFormInput } from '@home-module-components';
 import './LoginForm.scss';
 
 export const LoginForm: React.FC = () => {
@@ -39,12 +39,7 @@ export const LoginForm: React.FC = () => {
         extendedUnderlineMessage='Do not remember the password?'
       />
       <div className='sign-in-group'>
-        <div className='remember-checkbox-group-login'>
-          <input type='checkbox' id='remember' name='remember' />
-          <label htmlFor='remember'>
-            <span>{`Remember me`}</span>
-          </label>
-        </div>
+        <CheckboxFormInput id='remember-checkbox' text={`Remember me`} />
         <Button buttonType='submitButton'>{`Sign up`}</Button>
       </div>
       <div className='login-separator__line' />

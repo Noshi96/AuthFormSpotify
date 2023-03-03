@@ -1,0 +1,70 @@
+.checkbox-group {
+  --checkbox-input-height: 20px;
+  --checkbox-input-width: 20px;
+  --checkbox-horizontal-spaces: 38px; //18px;
+  --checkmark-style-width: 20px;
+  --checkmark-style-height: 20px;
+  --inside-checkmark-left: 7px;
+  --inside-checkmark-top: 3px;
+  --inside-checkmark-width: 4px;
+  --inside-checkmark-height: 9px;
+
+  font-size: var(--regular-small-font-size);
+
+  .container {
+    display: block;
+    position: relative;
+    padding-left: var(--checkbox-horizontal-spaces);
+    cursor: pointer;
+    user-select: none;
+  
+    // Hide the browser's default checkbox
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+  
+    .checkmark {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: var(--checkbox-input-height);
+      width: var(--checkbox-input-height);
+      border-radius: 5px;
+      border: 1px solid var(--color-secondary-dark);
+      
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+  
+    &:hover input ~ .checkmark {
+      border: 1px solid var(--color-spotify-standard);
+    }
+  
+    input:checked ~ .checkmark {
+      background: var(--color-spotify-standard);
+      border: 1px solid var(--color-spotify-standard);
+      &:after {
+        display: block;
+      }
+    }
+  
+    // Style the checkmark/indicator
+    .checkmark:after {
+      left: var(--inside-checkmark-left);
+      top: var(--inside-checkmark-top);
+      width: var(--inside-checkmark-width);
+      height: var(--inside-checkmark-height);
+      border: solid white;
+      border-width: 0 1px 1px 0;
+      transform: rotate(45deg);
+    }
+  }
+}
