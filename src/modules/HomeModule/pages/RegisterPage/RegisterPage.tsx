@@ -1,14 +1,6 @@
 import React from 'react';
+import { RegisterForm } from '@home-module-components';
 
-import './RegisterPage.scss';
-import { LayoutGlobalComponent } from '@global-components';
-import { LoginForm, RegisterForm } from '@home-module-components';
+const RegisterPage: React.FC = () => <RegisterForm />;
 
-export const RegisterPage: React.FC = () => {
-  return (
-    <LayoutGlobalComponent>
-      <RegisterForm />
-      {/* <LoginForm /> */}
-    </LayoutGlobalComponent>
-  );
-};
+export default RegisterPage;
