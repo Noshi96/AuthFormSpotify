@@ -3,6 +3,81 @@
 /// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
 
 :root {
-    --color-primary: #5721f2;
-    --color-on-surface: #000;
+    --color-primary: #000000;
+    --color-on-surface: #000000;
+    --color-secondary-dark: #444444;
+    --color-spotify-standard: #65D36E;
+    --color-white-standard: #ffffff;
+    --color-hover-dropdown: #F0F0F0;
+    --color-gray-standard: #bbbbbb;
+    --color-gray-placeholder: #848484;
+    --default-small-font-size: 0.813rem; //13px
+    --default-input-font-size: 0.875rem; // 14 px
+    --regular-small-font-size: 0.875rem;  // 14px
+    --regular-font-size: 1rem;
+    --regular-plus-font-size: 1.125rem; // 18 px
+    --big-font-size: 1.688rem;// 27px
+    --big-plus-font-size: 2.25rem; // 36px
+    --bold-plus-font-weight: 800;
+    --bold-font-weight: 700;
+    --regular-plus-font-weight: 600;
+    --regular-font-weight: 500;
+    --small-font-weight: 400;
 }
+
+.welcome__header {
+    --welcome-header-vertical-spacing: 3.125rem; //50px
+    --welcome-header-buttons-area-vertical-spacing: 1.125rem; // 18px
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    gap: var(--welcome-header-vertical-spacing); //50px
+  
+   & &-spotify-logotype {
+    font-weight: var(--bold-plus-font-weight);
+    font-size: var(--big-font-size);
+    text-align: center;
+    }
+  
+    & &-title {
+      font-weight: var(--bold-font-weight);
+      font-size: var(--big-plus-font-size);
+      text-align: center;
+    }
+  
+    & &-login--title {
+      font-weight: var(--bold-font-weight);
+    }
+  
+    & &-buttons-area {
+      display: flex;
+      flex-direction: column;
+      gap: var(--welcome-header-buttons-area-vertical-spacing); // 18px
+      width: 100%;
+    }
+  }
+
+  .form-separator {
+    --form-separator-horizontal-spacing: 1.5rem; // 24px
+    --line-width: 140px;
+    --line-height: 1px;
+    --form-separator-height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--form-separator-horizontal-spacing);
+    background: transparent;
+    color: var(--color-gray-standard);
+    height: var(--form-separator-height);
+  
+    & &-line {
+      background: var(--color-gray-standard);
+      width: var(--line-width);
+      height: var(--line-height);
+    }
+  }
+  

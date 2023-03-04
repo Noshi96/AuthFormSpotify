@@ -13,3 +13,7 @@ body {
 p {
   color: var(--color-on-surface);
 }
+
+* {
+  box-sizing: border-box;
+}

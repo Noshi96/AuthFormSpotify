@@ -1,0 +1,48 @@
+.additional-form-information {
+  align-self: center;
+  font-size: var(--default-small-font-size);
+  text-align: center;
+  overflow-wrap: break-word;
+
+  span {
+    text-decoration: underline;
+    color: var(--color-spotify-standard);
+  }
+}
+
+.first-information {
+  --first-information-inline-size: 278px;
+
+  inline-size: var(--first-information-inline-size);
+
+  @media (min-width: 576px) {
+    inline-size: 100%;
+  }
+}
+
+.second-information {
+  --second-information-inline-size: 308px;
+
+  inline-size: var(--second-information-inline-size);
+
+  @media (min-width: 576px) {
+    inline-size: 100%;
+  }
+}
+
+.sign-email__span {
+  font-size: 1.125rem;
+  text-align: center;
+  font-weight: var(--bold-font-weight);
+}
+
+.login-question {
+  font-weight: var(--regular-plus-font-weight);
+  font-size: var(--regular-font-size);
+  text-align: center;
+
+  span {
+    text-decoration: underline;
+    color: var(--color-spotify-standard);
+  }
+}

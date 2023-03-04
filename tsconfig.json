@@ -19,7 +19,9 @@
     "paths": {
       "@/*": ["src/*"],
       "@modules": ["./src/modules"],
-      "@global-components": ["./src/global-components"]
+      "@global-components": ["./src/global-components"],
+      "@home-module-components": ["./src/modules/HomeModule/components"],
+      "@hooks": ["./src/hooks"]
     }
   },
   "include": ["src"],

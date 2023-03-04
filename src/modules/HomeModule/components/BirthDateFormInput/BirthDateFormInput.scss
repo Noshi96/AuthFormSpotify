@@ -1,0 +1,64 @@
+.birth-date__label {
+  --birth-date-label-padding-bottom: 1rem;
+
+  font-size: var(--regular-small-font-size);
+  font-weight: var(--bold-font-weight);
+  padding-bottom: var(--birth-date-label-padding-bottom);
+}
+
+.date-group {
+  --date-input-horizontal-spacing: 0.75rem; // 12px
+  --label-group-padding-bottom: 0.625rem; // 10px
+  --month-form-group-min-width: 135px;
+  --month-form-group-width: 189px;
+  --day-form-group-width: 110px;
+  --year-form-group-width: 119px;
+  --input-height: 56px;
+  --input-radius: 50px;
+  --input-padding-left-mobile: 1.5rem;
+  --input-padding-left-desktop: 2rem;
+
+
+  display: flex;
+  justify-content: space-between;
+  gap: var(--date-input-horizontal-spacing);
+  max-width: 100%;
+}
+
+.label-group {
+  padding-bottom: var(--label-group-padding-bottom);
+}
+
+.month-form-group {
+  min-width: var(--month-form-group-min-width);
+  @media (min-width: 576px) {
+    width: var(--month-form-group-width);
+  }
+}
+
+.day-form-group {
+  max-width: 100%;
+  @media (min-width: 576px) {
+    width: var(--day-form-group-width);
+  }
+}
+
+.year-form-group {
+  max-width: 100%;
+  @media (min-width: 576px) {
+    width: var(--year-form-group-width);
+  }
+}
+
+.day__input, .year__input {
+  width: 100%;
+  height: var(--input-height);
+  border: 1px solid var(--color-secondary-dark);
+  border-radius: var(--input-radius);
+  font-size: var(--default-input-font-size);
+  padding-left: var(--input-padding-left-mobile);
+
+  @media (min-width: 576px) {
+    padding-left: var(--input-padding-left-desktop); //32px
+  }
+}

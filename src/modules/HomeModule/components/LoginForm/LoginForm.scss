@@ -1,0 +1,33 @@
+.sign-in-group {
+  --checkbox-text-spacing: 1.125rem; //18px;
+
+  display: flex;
+  justify-content: space-between;
+
+  .remember-checkbox-group-login {
+    display: flex;
+    align-items: center;
+    gap: var(--checkbox-text-spacing);
+    font-weight: var(--small-font-weight);
+    font-size: var(--default-input-font-size);
+  }
+}
+
+.login-separator__line {
+  height: 1px;
+  background: var(--color-gray-standard);
+}
+
+.no-account-group {
+  --sign-up-button-spacing: 1.5rem; // 24px
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sign-up-button-spacing);
+
+  & &__title{
+    font-weight: var(--bold-font-weight);
+    font-size: var(--regular-plus-font-size);
+  }
+}
